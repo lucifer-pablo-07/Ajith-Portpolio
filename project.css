@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.project {
+    color: white;
+    min-height: 100vh;
+    position: absolute;
+    width: 100%;
+
+}
+
+.project h1 {
+    font-size: 35px;
+    text-align: center;
+    padding: 20px;
+}
+
+.heading {
+    height: 80px;
+    padding: 10px 0px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    text-align: center;
+    animation: bor 2s linear forwards;
+}
+.heading h2 {
+    font-size: 55px;
+    position: relative;
+    animation: head 2s linear forwards;
+
+}
+
+.heading h2 span {
+    color: #D6D6D68A;
+    position: relative;
+    animation: head2 5s linear forwards;
+}
+
+
+.project-scroll {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: projects 3s ease-in forwards;
+    position: relative;
+    padding: 20px;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    min-height: 100%;
+
+}
+
+.project-card {
+    transition: 1s;
+    width: 210px;
+    border-radius: 10px;
+    height: 350px;
+    position: relative;
+
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+
+    transition: 0.5s;
+
+}
+.exp1 {
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    z-index: 99;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    opacity: 0;
+    transition: 1s;
+}
+
+.project-card:hover img {
+    transform: rotateZ(1deg);
+}
+.project-card:hover ~ .exp1 {
+    opacity: 1;
+    bottom: -40px;
+}
+.project1 {
+    min-height: 100vh;
+    position: absolute;
+    color: white;
+    padding-top: 45px;
+    width: 100%;
+}
+
+.sub-project {
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.project-left,.project-right {
+    width: 50%;
+    min-height: 90%;
+}
+
+.project-right h1 {
+    margin-top: 30px;
+    font-size: 50px;
+    animation: headingh1 2s linear forwards;
+    animation-delay: 4s;
+    opacity: 0;
+    position: relative;
+    left: -100px;
+}
+
+.project-right h2 {
+    padding: 20px 0px;
+    font-size: 40px;
+    animation: headingh2 2s linear forwards;
+    animation-delay: 4s;
+    opacity: 0;
+    position: relative;
+    left: -100px;
+}
+
+.project-right p {
+    font-size: 20px;
+    width: 50%;
+    animation: headingphara 2s linear forwards;
+    animation-delay: 4s;
+    opacity: 0;
+   
+}
+
+.project-left img {
+    width: 350px;
+    height:350px;
+    position: absolute;
+    left: 35%;
+    border-radius: 60%;
+    opacity: 0;
+    animation: projectdetails 3s linear forwards;
+    animation-delay: 2s;
+}
+
+.project-right {
+    padding: 10px;
+}
+.project-left{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.pro {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    right: 10px;
+    bottom: 10px;
+    animation: pro 3s linear forwards;
+    animation-delay: 1s;
+    border-radius: 20px;
+    object-fit: cover;
+    transform: translateX(300px);
+}
+button{
+position: absolute;
+padding: 10px 20px;
+background-color: #D6D6D68A;
+color: white;
+top: 150px;
+right: 50px;
+border-radius: 10px;
+border: none;
+animation: btn 2s linear backwards;
+animation-delay: 4.5s;
+}
+
+ @keyframes btn {
+    from {
+       
+        opacity: 0;
+    }
+
+    to {
+      
+        opacity: 1;
+    }
+
+
+}
+@keyframes headingphara {
+    from {
+       
+        opacity: 0;
+    }
+
+    to {
+      
+        opacity: 1;
+    }
+
+
+}
+@keyframes headingh2 {
+    from {
+        left: -100px;
+        opacity: 0.1;
+    }
+
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+
+
+}
+
+@keyframes headingh1 {
+    from {
+        left: -100px;
+        opacity: 0.1;
+    }
+
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+
+
+}
+
+@keyframes pro {
+    from {
+        display: none;
+    }
+
+    to {
+        transform: translateX(0px);
+        display: block;
+    }
+
+}
+
+@keyframes projectdetails {
+    from {
+        left: 35%;
+        opacity: 1;
+        border-radius: 50px;
+    }
+
+    to {
+        left: 5%;
+        width: 30%;
+        height: 430px;
+        opacity: 1;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+@keyframes projects {
+    form {
+        left: 0;
+        opacity: 1;
+    }
+
+    to {
+        left: -2000px;
+        opacity: 0;
+
+    }
+
+}
+
+
+
+
+@keyframes head2 {
+    from {
+        top: 0px;
+        opacity: 1;
+    }
+
+    to {
+        top: -200px;
+        opacity: 0;
+    }
+}
+
+@keyframes head {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+
+    to {
+        left: -500px;
+        opacity: 0;
+    }
+
+}
+
+@keyframes bor {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+@media only screen and (min-width:300px) and (max-width:600px){
+
+    .heading{
+        height: 60px;
+    }
+    .heading h2{
+        font-size: 25px;
+    }
+     .project h1{
+        font-size: 30px;
+     }
+    button{
+        right: 12px;
+        top: 60px;
+        padding: 6px 10px;
+    }
+    .project-right h1{
+        font-size: 27px;
+        margin-top: 20px;
+    }
+    .project-right h2{
+        font-size: 20px;
+        margin-top: 0px;
+        padding: 10px 0px;
+    }
+    .project-right p{
+        font-size: 12px;
+        width: 100%;
+    }
+    .pro {
+        position: absolute;
+        width: 138px;
+        height: 160px;
+    }
+@keyframes projectdetails {
+    from {
+        left: 35%;
+        opacity: 1;
+        border-radius: 50px;
+    }
+
+    to {
+        left: 5%;
+        height: 350px;
+        opacity: 1;
+        width: 40%;
+        border-radius: 10px;
+    }
+}
+}   
+@media only screen and (min-width:600px) and (max-width:900px){
+    .heading{
+        height: 80px;
+    }
+    .heading h2{
+        font-size: 45px;
+    }
+    button{
+        right: 20px;
+        top: 75px;
+    }
+    .project-right h1{
+        font-size: 35px;
+        margin-top: 20px;
+    }
+    .project-right h2{
+        font-size: 30px;
+        margin-top: 0px;
+        padding: 10px 0px;
+    }
+    .project-right p{
+        font-size: 13px;
+    }
+    .pro {
+        position: absolute;
+        width: 138px;
+        height: 160px;
+    }
+@keyframes projectdetails {
+    from {
+        left: 35%;
+        opacity: 1;
+        border-radius: 50px;
+    }
+
+    to {
+        left: 5%;
+        height: 400px;
+        opacity: 1;
+        width: 35%;
+        border-radius: 10px;
+    }
+}
+}   
+@media only screen and (min-width:900px) and (max-width:1200px){
+    button{
+        right: 20px;
+        top: 75px;
+    }
+    .project-right h1{
+        font-size: 40px;
+        margin-top: 20px;
+    }
+    .project-right h2{
+        font-size: 35px;
+        margin-top: 0px;
+        padding: 10px 0px;
+    }
+    .project-right p{
+        font-size: 15px;
+    }
+    .pro {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+    }
+@keyframes projectdetails {
+    from {
+        left: 35%;
+        opacity: 1;
+        border-radius: 50px;
+    }
+
+    to {
+        left: 5%;
+        height: 400px;
+        opacity: 1;
+        width: 35%;
+        border-radius: 10px;
+    }
+}
+}   
