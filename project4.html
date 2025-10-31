@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://kit.fontawesome.com/c0079a392f.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: black;
+    }
+         .pro-cont-1 {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      gap: 30px;
+     color: white;
+     overflow: hidden;
+     padding: 10px;
+    }
+
+    .pro-cont-1 .cont:first-child {
+      width: 50%;
+      height: 100%;
+    }
+
+    .pro-cont-1>.cont:first-child>img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+    }
+
+    .pro-cont-1>.cont:nth-child(2) {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      color: rgb(232, 225, 225);
+    }
+
+    .pro-cont-1>.cont:last-child {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: space-between;
+
+    }
+    .pro-cont-1>.cont:last-child img{
+            width: 200px;
+            height: 300px;
+            border-radius: 20px;
+    }
+    .pro-cont-1>.cont:last-child p{
+      color: white;
+      background-color: rgb(57, 55, 55);
+      border-radius: 10px;
+      width: 100px;
+      text-align: center;
+      padding: 8px;
+    }
+    .cont h1{
+        font-size: 50px;
+    }
+    .a h1{
+        padding: 20px 0px;
+        font-size: 40px;
+    }
+    .a p{
+        line-height: 25px;
+    }
+    label{
+      cursor: pointer;
+    }
+    .collection>img{
+      transition: all 3s;
+    }
+    .collection:hover>img{
+      transform: scale(1.5);
+    }
+
+.cont>i{
+    position: absolute;
+    font-size: 55px;
+    color: rgb(239, 235, 235);
+}
+.imag{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animation-img{
+  animation-name: image;
+  animation-duration: 3s;
+}
+@keyframes image {
+  10%{
+    transform: scaleY(1.2) translateX(200px) ; 
+  }
+ 
+  100%{
+  transform: scale(1) translateX(0px);
+  }
+}
+.para{
+  animation-name: para;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode:forwards;
+  
+  /* transform: translateY(-300px); */
+  opacity: 0;
+}
+@keyframes para {
+  from{
+    transform: translateY(-300px);
+    opacity: 1;
+  }
+  to{
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+.end-img{
+  animation-name: end-img;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  transform: translateX(500px);
+  animation-fill-mode: forwards;
+}
+.end-img a{
+    text-decoration: none;
+}
+@keyframes end-img {
+    from{
+      transform: translateX(500px);
+    }
+    to{
+    transform:translateX(0px) ;
+  }
+}
+
+@media only  screen and (min-width:300px) and (max-width:600px){
+         .pro-cont-1 {
+          align-items: center;
+          height: max-content;
+          flex-direction: column;
+         }
+         .cont,.pro-cont-1>.cont:nth-child(2),.pro-cont-1 .cont:first-child{
+          width: 100%;
+         }
+          
+}
+
+</style>
+
+
+
+
+</head>
+
+<body>
+     <div class="pro-cont-1">
+    <div class="cont imag animation-img">
+      <img src="./p-4.jpg" alt="">
+      <i class="fa-solid fa-circle-play"></i>
+    </div>
+    <div class="cont para">
+      <h1>Project-1</h1>
+      <div class="a">
+        <h1>Framer</h1>
+        <p>My portfolio project is a personal website that I created using HTML, CSS, and JavaScript. It
+                    includes different sections like Home, About, Skills, and Projects. The website shows my personal
+                    details, educational background, skills, and the projects I have done. I have used smooth scrolling
+                    effects and simple animations to make the design more attractive.
+        </p>
+      </div>
+    </div>
+    <div class="cont end-img">
+     <a href="./index.html"><p>Back</p></a> 
+      <img src="./p-4.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
